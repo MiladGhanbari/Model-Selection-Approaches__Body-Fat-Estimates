@@ -22,4 +22,43 @@ The following graphs show the results of best subset strategy. A lower value of 
 
 
 ## Forward selection strategy
+An alternative to the best subset strategy is forward selection. It has the following steps:
+- Starts with no variables in the model
+- Tests the addition of each variable using one of the selection criteria (AIC, BIC, etc.)
+- Adds the new variable that improves the model the most
+- Repeat until no remaining variables improve the model
 
+The following is the summary of the selected best model by forward selection strategy using AIC criteria:
+
+```sh
+formula = lpsa ~ lcavol + lweight + svi + lbph + age
+
+## Coefficients:
+##                 Estimate 
+## (Intercept)     0.49473 
+## lcavol          0.54400 
+## lweight         0.58821 
+## svi             0.71490 
+## lbph            0.10122 
+## age            -0.01644 
+```
+
+## Backward selection strategy
+Another alternative to the best subset strategy is backward selection:
+- Start with all variables included in the model
+- Test the deletion of each variable using one of the selection criteria (AIC, BIC, etc.)
+- Delete the variable that results in the best model improvement once it has been removed
+- Repeat this process until no further improvement is possible
+
+The following is the summary of the selected best model by forward selection strategy using BIC criteria:
+
+```sh
+formula = lpsa ~ lcavol + lweight + svi
+
+Coefficients:
+##                Estimate 
+## (Intercept)    -0.77716
+## lcavol          0.52585
+## lweight         0.66177
+## svi             0.66567 
+```
