@@ -16,7 +16,7 @@ To combat overfitting, we usually look for the best model fit subject to a const
 
 ## Best subset strategy (exhaustive search)
 
-![alt text](ES_BIC.jpg)
-![alt text](ES_AdjustedR2.jpg)
+![alt text](ES_BIC.JPG)
+![alt text](ES_AdjustedR2.JPG)
 
 
