@@ -15,8 +15,11 @@ To combat overfitting, we usually look for the best model fit subject to a const
 
 
 ## Best subset strategy (exhaustive search)
+The following graphs show the results of best subset strategy. A lower value of BIC corresponds to a better model fit. On the other hand, a higher value of R^2 adj corresponds to a better model fit. Therefore, based on BIC, the best model fit can be achieved using lcavol, lweight, and svi as model variables. Based on adjusted-R^2, the best model fit consists of all variables except gleason. The adjusted-R^2 is the simplest penalized model selection criterion and it tends to under-penalize the model complexity. The BIC penalizes model complexity more than adjusted-R^2 and is generally preferred over adjusted-R^2 for model selection purposes.
 
 ![alt text](ES_BIC.JPG)
 ![alt text](ES_AdjustedR2.JPG)
 
+
+## Forward selection strategy
 
